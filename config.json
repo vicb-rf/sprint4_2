@@ -1,0 +1,12 @@
+{
+    "database": {
+        "host": "localhost",
+        "user": "user",
+        "password": "1234",
+        "database": "dadosDb",
+        "db": "mysql"        
+    },
+    "user": "admin",
+    "clave": 1234,
+    "secret": "tokensecreto"
+}

@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "cea119e2-bdcf-4d54-8549-c63a1c670298",
+		"name": "entrega2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:4000/players",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Mzc0NDk3NTAsImV4cCI6MTYzNzQ1MzM1MH0.LsHasS3fPYagK7IgfJdLLLQVsabjX_HabZaAX7Cwr4g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:4000/players",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/players",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Mzc0NDU5OTQsImV4cCI6MTYzNzQ0OTU5NH0.gGeIh7KVNsJHF6D0JkmnIn2dYTKoJggcYM7YkX5eR1Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"lulu\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/players",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/players/618faa1455da75366e051e79",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Mzc0NDk3NTAsImV4cCI6MTYzNzQ1MzM1MH0.LsHasS3fPYagK7IgfJdLLLQVsabjX_HabZaAX7Cwr4g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/players/61997191dfc2de26f28723",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"players",
+						"61997191dfc2de26f28723"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/players/61900081ebcfa7a11570cace/games",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Mzc0NDk3NTAsImV4cCI6MTYzNzQ1MzM1MH0.LsHasS3fPYagK7IgfJdLLLQVsabjX_HabZaAX7Cwr4g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:4000/players/61997182dfc2de26f2872383/games",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"players",
+						"61997182dfc2de26f2872383",
+						"games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/players/61997182dfc2de26f2872383/games",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Mzc0NDk3NTAsImV4cCI6MTYzNzQ1MzM1MH0.LsHasS3fPYagK7IgfJdLLLQVsabjX_HabZaAX7Cwr4g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:4000/players/61997182dfc2de26f2872383/games",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"players",
+						"61997182dfc2de26f2872383",
+						"games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/players/61997191dfc2de26f2872386/games",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Mzc0NDk3NTAsImV4cCI6MTYzNzQ1MzM1MH0.LsHasS3fPYagK7IgfJdLLLQVsabjX_HabZaAX7Cwr4g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/players/61997191dfc2de26f2872386/games",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"players",
+						"61997191dfc2de26f2872386",
+						"games"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/players/ranking",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Mzc0NDk3NTAsImV4cCI6MTYzNzQ1MzM1MH0.LsHasS3fPYagK7IgfJdLLLQVsabjX_HabZaAX7Cwr4g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:4000/players/ranking",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"players",
+						"ranking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/players/ranking/winner",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Mzc0NDk3NTAsImV4cCI6MTYzNzQ1MzM1MH0.LsHasS3fPYagK7IgfJdLLLQVsabjX_HabZaAX7Cwr4g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:4000/players/ranking/winner",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"players",
+						"ranking",
+						"winner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/players/ranking/loser",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Mzc0NDk3NTAsImV4cCI6MTYzNzQ1MzM1MH0.LsHasS3fPYagK7IgfJdLLLQVsabjX_HabZaAX7Cwr4g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:4000/players/ranking/loser",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"players",
+						"ranking",
+						"loser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
