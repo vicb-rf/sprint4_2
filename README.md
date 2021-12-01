@@ -8,7 +8,7 @@ Todas las pruebas son realizadas usando Postman
 
 
 # Nivel 1
-Modificar el archivo .env  de acuerdo a los parametros de tu base de datos Mongo.
+Modificar el archivo .env  de acuerdo a los parametros de tu base de datos Mongo y el puerto para el server.
 Ejecutar la aplicacion con:
 
 	>npm run mongo

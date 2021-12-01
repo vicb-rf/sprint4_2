@@ -9,7 +9,7 @@ const handleErr = require('../middleware/handlerErr');
 
 
 //settings
-app.set('port', process.env.PORT || 4000);
+app.set(process.env.PORT || 4000);
 const { host, user, password, database } = config.database; 
 
 //conectar a mysql

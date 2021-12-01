@@ -7,7 +7,7 @@ const handleErr = require('../middleware/handlerErr');
 
 
 //settings
-app.set('port', process.env.PORT || 4000);
+app.set( process.env.PORT || 4000);
 
 //conectar a mongo
 (async function conectarDB(){
