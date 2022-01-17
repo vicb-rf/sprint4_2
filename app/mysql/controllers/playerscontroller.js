@@ -8,7 +8,7 @@ const playersGet = async (req, res, next) => {
         console.log('Buscando todos los jugadores');
         const users = await User.findAll();
         if(users.length === 0) return res.send('No hay jugadores');
-        res.json(users);  
+        res.json({ users });  
     }
     catch(err){
         next(err);
@@ -24,12 +24,12 @@ const playersPost = async (req, res, next) => {
         try{
             if(username === '' || username === 'Anonimo'){
                 const user = await User.create({ username: anonimo(),created: new Date()});
-                return res.send(user);
+                return res.json({ user });
             }    
             else {
                 const user = await User.create({ username, created: new Date()});
                 console.log('usuario creado');
-                res.send(user);
+                res.json({ user });
             }    
         }
         catch(err){ 
@@ -51,7 +51,7 @@ const playersPut = async(req, res, next) => {
         await User.update({ username }, { where: {id}});
         const newUsername = await User.findByPk(id);
     
-        res.send(newUsername);    
+        res.json({ newUsername });    
     }
     catch(err){
         next(err);

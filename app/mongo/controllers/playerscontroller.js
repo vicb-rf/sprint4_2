@@ -7,7 +7,7 @@ const playersGet = async (req, res, next) => {
 
     try{
     let players = await User.find();
-    res.send({ players });
+    res.json({ players });
 
     }
     catch(err){
@@ -25,12 +25,12 @@ const playersPost = async (req, res, next) => {
         if (username === '' || username === 'anonimo') {
             const user = new User({ username: anonimo() });
             await user.save();
-            console.log(`${username}, creado...`);
+            //console.log(`${username}, creado...`);
             return res.json({ user });            
         }
         const user = new User({ username });
         await user.save();
-        res.json(user);
+        res.json({ user });
         console.log(`${username}, creado...`);        
     }
     catch (err) {
@@ -50,13 +50,13 @@ const playersPut = async(req, res, next) => {
             const user = new User({ username: anonimo() });
             await user.save();
             console.log(`User ${id}, actualizado...`);
-            return res.json(user);            
+            return res.json({ user });            
         }
     
         await User.findByIdAndUpdate(id, {username});
         console.log(`User ${id}, actualizado...`); 
         const userUpdate = await User.find({ _id:id }); 
-        res.json(userUpdate);    
+        res.json({ userUpdate });    
     }
     catch(err){
         next(err);

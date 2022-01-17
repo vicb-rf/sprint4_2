@@ -1,15 +1,9 @@
 const Sequelize = require('sequelize');
 
-const config = require('../../../config.json');
-
-const { user, password, database } = config.database;
-const sequelize = new Sequelize(database, user, password,
+const sequelize = new Sequelize(process.env.DATABASE, process.env.USER, process.env.PASSWORD,
      { 
          dialect: 'mysql',
          //logging: false 
      });
-
-
-//conectadb();
 
 module.exports =  sequelize 

@@ -1,5 +1,4 @@
 const jwt = require('jsonwebtoken');
-const { secret } = require('../../config.json')
 
 const validarJWT = async( req, res, next ) => {
 
@@ -11,7 +10,7 @@ const validarJWT = async( req, res, next ) => {
         });
     }
     try {
-        const tokenOk = jwt.verify(token, secret)
+        const tokenOk = jwt.verify(token, process.env.SECRETMONGO)
         if(tokenOk){
             console.log('Token Ok...')
             next();

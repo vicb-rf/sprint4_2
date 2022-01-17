@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 const dbConnection = require('../mongo/database/mongoconec');
-const handleErr = require('../middleware/handlerErr');
+const handleErr = require('./middleware/handlerErr');
 
 
 //settings

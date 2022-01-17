@@ -3,9 +3,9 @@ const { check } = require('express-validator');
 const router = express.Router();
 
 const { playersGet, playersPost, playersPut } = require(`../controllers/playerscontroller`);
-const { validarCampos } = require('../../middleware/validarcampos');
+const { validarCampos } = require('../middleware/validarcampos');
 const { existeUserPorId, existeUsername } = require('../database/dbvalidator');
-const validarJWT  = require('../../middleware/validarjwt');
+const validarJWT  = require('../middleware/validarjwt');
 
 
 //1. retorna el llistat de tots els jugadors del sistema amb el seu percentatge mig d’èxits

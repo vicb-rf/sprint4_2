@@ -8,9 +8,9 @@ const {
   playersPut,
 } = require(`../controllers/playerscontroller`);
 
-const validarJWT = require("../../middleware/validarjwt");
+const validarJWT = require("../middleware/validarjwt");
 
-const { validarCampos } = require("../../middleware/validarcampos");
+const { validarCampos } = require("../middleware/validarcampos");
 const { existeUsername } = require("../database/validar");
 
 //const router = Router();

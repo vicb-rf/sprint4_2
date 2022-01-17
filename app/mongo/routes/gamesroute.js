@@ -3,9 +3,9 @@ const router = express.Router();
 const { check } = require('express-validator');
 
 const { gamesGet, gamesPost, gamesDelete } = require(`../controllers/gamescontroller`);
-const { validarCampos } = require('../../middleware/validarcampos');
+const { validarCampos } = require('../middleware/validarcampos');
 const { existeUserPorId } = require('../database/dbvalidator');
-const validarJWT = require('../../middleware/validarjwt');
+const validarJWT = require('../middleware/validarjwt');
 
 //4. retorna el llistat de jugades per un jugador
 router.get('/:id/games', 

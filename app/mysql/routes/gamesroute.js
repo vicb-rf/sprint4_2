@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const { gamesGet, gamesPost, gamesDelete } = require(`../controllers/gamescontroller`);
-const validarJWT = require('../../middleware/validarjwt');
+const validarJWT = require('../middleware/validarjwt');
 
 //4. retorna el llistat de jugades per un jugador
 router.get('/:id/games', validarJWT, gamesGet);

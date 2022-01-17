@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const { secret } = require('../../config.json')
+//const { secret } = require('../../config.json')
 
 const generaJWT = () => {
 
@@ -7,8 +7,8 @@ const generaJWT = () => {
 
         console.log('generando jwt');
 
-        jwt.sign({ }, secret,
-             //{ expiresIn: '1h'},      //tiempo expiracion del token
+        jwt.sign({ }, process.env.SECRETMONGO,
+             { expiresIn: '1h'},      //tiempo expiracion del token
              (err, token) => {
             if(err){
                 console.log(err);

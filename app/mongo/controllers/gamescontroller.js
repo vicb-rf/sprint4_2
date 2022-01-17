@@ -10,7 +10,7 @@ const gamesGet = async(req, res, next) => {
 
     try{
         const game = await Game.find({ user: id }).populate({ path: 'user'});
-        if(game == '') return res.send('No tiene tiradas');
+        if(game == '') return res.json({msg: 'No tiene tiradas'});
         res.send(game);
     }
     catch(err){
@@ -34,7 +34,7 @@ const gamesPost = async(req, res, next) => {
         await game.save();
     
         console.log('Tirada grabada...');
-        res.json(game);  
+        res.json({ game });  
     }
     catch(err){
         next(err);
@@ -55,7 +55,7 @@ const gamesDelete = async(req, res, next) => {
         
         await Game.deleteMany({ user: id});
         console.log('eliminadas')
-        res.send('Tiradas Eliminadas');
+        res.json({ msg: 'Tiradas Eliminadas' });
     }
     catch(err){
         next(err);
