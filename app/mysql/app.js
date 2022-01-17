@@ -4,19 +4,17 @@ const express = require('express');
 const app = express();
 
 const sequelize = require('./database/mysqlconec');
-const config = require('../../config.json');
-const handleErr = require('../middleware/handlerErr');
+const handleErr = require('./middleware/handlerErr');
 
 
 //settings
 app.set(process.env.PORT || 4000);
-const { host, user, password, database } = config.database; 
 
 //conectar a mysql
 async function conectadb(){
     
-    const conexion = await mysql.createConnection({ host, user, password });
-    conexion.query(`CREATE DATABASE IF NOT EXISTS \`${database}\`;`, function(err, result) {
+    const conexion = await mysql.createConnection({ host: process.env.HOST, user: process.env.USER, password: process.env.PASSWORD });
+    conexion.query(`CREATE DATABASE IF NOT EXISTS \`${process.env.DATABASE}\`;`, function(err, result) {
         if(err) throw err;
         sequelize.sync()
         .then(console.log('\n Bd sincronizada'))

@@ -15,7 +15,7 @@ const gamesGet = async(req, res, next) => {
         const jugadas = await Game.findAll({ where: { UserId: id }})
         if(jugadas.length === 0) return res.send('Jugador no ha jugado aun');
     
-        res.json(jugadas);
+        res.json({ jugadas });
     }
     catch(err){
         netx(err);
@@ -38,7 +38,7 @@ const gamesPost = async(req, res, next) => {
     
         await Game.create(tirar);
             
-        res.json(tirar);  
+        res.json({ tirar });  
     }
     catch(err){
         next(err);
@@ -59,7 +59,7 @@ const gamesDelete = async(req, res) => {
         if(jugadas.length === 0) return res.send('Jugador no ha jugado aun');
         await Game.destroy({ where: { UserId: id }})
     
-        res.send('Tiradas Eliminadas');
+        res.json({ msg: 'Tiradas Eliminadas' });
     }
     catch(err){
         next(err);

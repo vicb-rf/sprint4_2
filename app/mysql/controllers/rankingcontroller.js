@@ -9,7 +9,7 @@ const rankingGet = async(req, res, next) => {
         const average = await sequelize.query("SELECT AVG(ganador)*100 AS average FROM Games ");
         const players = average[0][0];
         
-        res.send({
+        res.json({
             msg: 'El promedio de exito del conjunto de jugadores',
             players
         });
@@ -28,7 +28,7 @@ const rankingLoser = async(req, res, next) => {
 
         const players = await sequelize.query("SELECT Users.username, UserId, AVG(ganador)*100 AS average FROM Games INNER JOIN Users ON Games.UserId=Users.id GROUP BY UserId ORDER BY average");
                 
-        res.send({
+        res.json({
             msg: 'Jugador con el peor promedio de exito',
             jugador: players[0][0]
         });
@@ -46,7 +46,7 @@ const rankingWinner = async(req, res, next) => {
 
         const players = await sequelize.query("SELECT Users.username, UserId, AVG(ganador)*100 AS average FROM Games INNER JOIN Users ON Games.UserId=Users.id GROUP BY UserId ORDER BY average DESC");
          
-        res.send({
+        res.json({
             msg: 'Jugador con el mejor promedio de exito',
             jugador: players[0][0]
         });
