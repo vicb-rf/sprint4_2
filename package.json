@@ -4,8 +4,8 @@
   "description": "Main structure of node.js project. Folders / files:",
   "main": "",
   "scripts": {
-    "mysql": "nodemon app/mysql/app.js",
-    "mongo": "nodemon app/mongo/app.js"
+    "mysql": "node app/mysql/app.js",
+    "mongo": "node app/mongo/app.js"
   },
   "author": "VC",
   "license": "ISC",
